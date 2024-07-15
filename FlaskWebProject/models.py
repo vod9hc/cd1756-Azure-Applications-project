@@ -1,7 +1,7 @@
 from datetime import datetime
 from FlaskWebProject import app, db, login
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import UserMixin
+from flask_login import UserMixin # type: ignore
 from azure.storage.blob import BlockBlobService
 import string, random
 from werkzeug import secure_filename

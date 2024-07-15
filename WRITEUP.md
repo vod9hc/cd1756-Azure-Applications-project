@@ -4,8 +4,14 @@
 
 *For **both** a VM or App Service solution for the CMS app:*
 - *Analyze costs, scalability, availability, and workflow*
-- *Choose the appropriate solution (VM or App Service) for deploying the app*
-- *Justify your choice*
+
+Costs: App Service tends to be more cost-effective initially and easier to predict. VMs might be cheaper for very specific, high-control scenarios.
+Scalability: App Service provides easier and more automated scaling options. VM offers more control but requires more management efforts.
+Availability: App Service has built-in high availability and disaster recovery features, while VMs offer high availability through more manual configurations.
+Workflow: App Service provides a simpler, while VMs offer greater control and customization at the cost of increased complexity.
+
+- I Choose the appropriate solution is App Service for deploying the app
+- Based on my analysis above, I think App Service is the best choice.
 
 ### Assess app changes that would change your decision.
 
