@@ -127,9 +127,17 @@ def _save_cache(cache):
    if cache.has_state_changed:
         session['token_cache'] = cache.serialize()
 
+# def _build_msal_app(cache=None, authority=None):
+#     return msal.ConfidentialClientApplication(
+#         client_credential=Config.CLIENT_SECRET,token_cache=cache
+#     )
+
 def _build_msal_app(cache=None, authority=None):
-    return msal.ConfidentalClientApplication(
-        client_credential=Config.CLIENT_SECRET,token_cache=cache
+    return msal.ConfidentialClientApplication(
+        client_id=Config.CLIENT_ID,
+        client_credential=Config.CLIENT_SECRET,
+        authority=authority or Config.AUTHORITY,
+        token_cache=cache
     )
 
 def _build_auth_url(authority=None, scopes=None, state=None):
